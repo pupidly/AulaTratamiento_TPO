@@ -467,7 +467,7 @@ header a:active {
 
 
  #senoidal{
-   background-image: url(/img/pizarron1.png);
+   background-image: url('img/pizarron1.png');
    box-shadow: 5px 10px 10px rgba(0, 0, 0,.7);
    width: 90%;
    height: 90%;
