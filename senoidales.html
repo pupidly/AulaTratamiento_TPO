@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamiento de señales</title>
+    <link rel="icon" href="img/wave.ico">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="icon" href="https://example.com/myicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Indie+Flower&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/5456e448ec.js" crossorigin="anonymous"></script>
+    
+<!--     <script type="text/javascript" src="dat.gui.min.js"></script>
+ -->    
+
+  </head>
+
+<body>
+   
+    <header>
+              
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html"> <b> Inicio</b> </a></li>
+            <li><a class="active" href="senoidales.html"> <b> Senoidales </b> </a></li>
+            <!-- <li><a href="serieFourier.html"> <b> Serie de Fourier </b> </a></li> -->
+            <!-- <li><a href="Autotest.html"> Autotest </a></li> -->
+          </ul> 
+        
+            <!-- <a class="contact" href="contact.html"><button class="con_bot">Contacto</button> </a> -->
+         </nav>  
+  
+        <div class="contact" >
+          <a href="contact.html"><button class="con_bot">Contacto</button> </a>
+        </div>
+        <h1>Tratamiento de señales</h1>
+
+    </header>
+
+
+    <main  class="mainSenoidales" >
+    
+      <p class="textoSenoidales">
+        Empezaremos trabajando con <b>funciones senoidales</b>. Las funciones senoidales constituyen el corazón de la materia.
+        Todo el análisis en frecuencia que veremos luego se basa en estas y es por eso que es tan importante tener en claro todas las características de las mismas.
+        Además, debemos comprender que hablamos de "funciones" porque estamos realizando un análisis matemático, pero estas funciones son representaciones "matemáticas" de SEÑALES reales. 
+        Un ejemplo de una <b>señal senoidal real</b> que se representa con una función senoidal es la tensión de red eléctrica disponible en un tomacorrientes.
+
+      </p> 
+
+
+       
+      <div class="parametrosSenoidales">   
+
+        <div class="parametrosSenoidalesImagen">
+          <img  src="/img/senoidalPartes2.png" alt="partes de una senoidal">
+        </div>
+
+        <div class="parametrosSenoidalesTexto">
+         
+          <h2>Parámetros de la onda senoidal</h2>
+
+          <ul>
+            <li> <b>AMPLITUD (A):</b>  Es el valor máximo que toma la onda y que es igual al valor pico de la onda.   </li>
+        
+            <li><b>FRECUENCIA/PERÍODO (F/T):</b> Es el número de ciclos realizados por segundo. La frecuencia es la inversa del período ( f=1/T). 
+            La unidad de medida en el Hercio (Hz) y del período es segundos [seg].</li>
+        
+            <li> <b> FASE ():</b> El ángulo de fase inicial φ es la fracción de período que ha transcurrido a partir de un origen.</li>
+        
+            <li> <b>VELOCIDAD ANGULAR (W):</b> es una medida de la velocidad de rotación. Se define como el ángulo girado por una unidad de tiempo. Su unidad es el radián por segundo [rad/s]. </li>           
+          </ul>
+        
+        </div>
+
+      </div> 
+
+
+      <div class="generacionSenoidales">
+      
+        <div  class="generacionSenoidalesImagen">
+          <img  id= "senoidalCirculo" src="/img/cosenoidalCirculo.gif" alt="generacion de senoidal a partir de la proyección de un fasor girando">
+        </div>
+
+      
+        <div class="generacionSenoidalesTexto" >
+          
+          <p>
+              Consideremos la expresión de la función senoidal:
+          </p>
+
+          <div id="ecuacion1">
+              <b> \[A.sin(w.t) = A.sin(2.\pi.f.t) = A.sin(\phi)\] </b> 
+          </div>
+
+          <p>
+              Hay dos formas de calcular el valor instantáneo de la misma, proporcionando el valor del instante (tiempo) en el que queremos saber el valor
+              o proporcionando el valor del ángulo.<!--  Esto suele generar confusión si no se conoce la interpretación de la onda senoidal como la proyección en el eje "y" 
+              de un fasor de longitud "A" que gira a una velocidad "w". Se puede preguntar cual es el valor de la proyección considerando la velocidad de girdo y el 
+              tiempo transcurrido (igual que si conocemos la velocidad de un auto y el tiempo desde que arranco podemos determinar la posición). Pero también, dado 
+              el avance del fasor no es en una línea (como sucede con un auto) sino que es un circulo, también podemos preguntarnos el valor luego de determinado giro.
+            -->
+          </p>
+            
+          <p>
+              Para comprender esto de un modo mas técnico, analizaremos las unidades:
+          </p>
+            
+          <p>
+              La unidad de la velocidad lineal es: \(m \over seg \) esto mismo para el caso en que giramos en un círculo es:  \(rad \over seg \) (donde el radián
+              hace referencia a una distancia recorrida pero alrededor de un círculo). En el caso de usar el tiempo, el argumento de la función (lo que va entre
+              paréntesis en la función senoidal) es \(w.t = [rad] \over [seg] . [seg] = [rad] \). 
+          </p>
+            
+          <p>
+              En el caso de que el argumento sea un ángulo, este se puede expresar
+              en grados o radianes por lo que lo que va adentro del paréntesis siempre termina siendo una unidad de ángulo. 
+          </p>
+
+        </div> 
+
+      </div>
+              
+<!--       <div class="containerPloteo"> 
+ -->       
+        <div class="controlesPloteo">
+
+          <div> 
+            <label for="amplitud"> 
+              <i class="fa-solid fa-circle-question"> 
+                <p class="hooverDefiniciones">
+                  La amplitud es una medida de la variación máxima del desplazamiento u otra<br>
+                  magnitud física que varía periódica o cuasiperiódicamente en el tiempo. <br>
+                  Es la distancia entre el punto más alejado de una onda y el punto de equilibrio o medio. <br>
+                  <a href="https://es.wikipedia.org/wiki/Amplitud_(f%C3%ADsica)" target="_blank" >Amplitud</a> 
+                </p>
+              </i> Amplitud [Vp]: 
+            </label>
+          
+            <input type="number" id="amplitud" placeholder="Amplitud (x defecto 20)" v-model="myAmplitud.value" />
+          </div>
+
+          <div>
+            <label for="frecuencia"> 
+              <i class="fa-solid fa-circle-question">
+                <p id="demo" class="hooverDefiniciones">
+                  La frecuencia es el número de repeticiones por unidad de tiempo de <br> 
+                  cualquier evento periódico. El período es la duración de tiempo de cada <br>
+                  evento repetitivo, por lo que el período es el recíproco de la frecuencia.<br> 
+                  <a href="https://es.wikipedia.org/wiki/Frecuencia" target="_blank" >Frecuencia</a> 
+                </p>
+              </i> Frecuencia [Hz]: 
+            </label>
+            <input type="number" id="frecuencia" placeholder="Frecuencia (x defecto 0.01) usar valores <0)"  v-model="myFrecuencia.value"/>
+          </div>
+
+          <div>
+            <label for="fase"> 
+              <i class="fa-solid fa-circle-question">
+                <p class="hooverDefiniciones"> 
+                  La fase indica la situación instantánea en el ciclo, de una magnitud que varía <br>
+                 cíclicamente, siendo la fracción del periodo transcurrido desde el instante correspondiente <br>
+                 al estado tomado como referencia.<br> 
+                  <a href="https://es.wikipedia.org/wiki/Fase_(onda)" target="_blank" > Fase</a>
+                </p>
+              </i> Fase [rad/seg]: 
+            </label>
+            <input type="number" id="fase" placeholder="Fase (x defecto 0)"  v-model="myFase.value"/>
+          </div>
+  
+          <div>
+            <input type="submit" name="Cambiar" value="Dibujar" onclick="NuevaSenoidal()" id='check1'>
+          </div>
+
+
+            
+     </div>
+
+        <div class="dibujoPloteo">
+<!--           <img id="pizarron1" src="img/pizarron1.png" alt="funcion ploteada">
+ -->          <canvas id="senoidal" onload="init()"></canvas>
+        </div>
+        
+<!--       </div> fin conteiner ploteo 
+ -->    
+      <script src="/js/app.js"></script>
+    
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    </main>
+
+
+
+
+    <footer>
+       
+        <a href="https://moodle.ryt.itu.uncu.edu.ar/" target="_blank"> <i class="fa-solid fa-graduation-cap"> aula virtual</i>   </a>
+    </footer>
+
+
+</body>
+</html>

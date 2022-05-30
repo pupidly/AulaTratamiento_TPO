@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamiento de señales</title>
+    <link rel="icon" href="img/wave.ico">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="icon" href="https://example.com/myicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Indie+Flower&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/5456e448ec.js" crossorigin="anonymous"></script>
+ 
+<!--     <script type="text/javascript" src="dat.gui.min.js"></script>
+ -->    
+
+  </head>
+
+<body>
+   
+    <header>
+              
+        <nav>
+          <ul class="nav_links">
+            <li><a href="index.html"> <b> Inicio</b>  </a></li>
+            <li><a href="senoidales.html"> <b> Senoidales </b></a></li>
+           <!--  <li><a href="serieFourier.html"> <b> Serie de Fourier </b> </a></li> -->
+            <!-- 
+             <li><a href="Autotest.html"> Autotest </a></li> -->
+          
+        
+            <!-- <a class="contact" href="contact.html"><button class="con_bot">Contacto</button> </a> -->
+         </nav>  
+  
+        <div class="contact" >
+          <a href="contact.html"><button id="ContactoenActivo" class="con_bot">Contacto</button> </a>
+        </div>
+        <h1>Tratamiento de señales</h1>
+
+    </header>
+
+    <main class="mainContacto">
+
+      <h1> FORMULARIO DE CONTACTO</h1>
+     
+      <h2>
+        
+        <p> Si tenés alguna duda sobre el contenido de la página o el funcionamiento 
+        de los simuladores, podés contactarte y comentarlo.
+        Te responderemos a tu mail a la brevedad.
+        </p>
+        <p>
+        TU COMENTARIO NOS AYUDA A MEJORAR 
+        </p>
+
+      </h2>
+
+        <form action="https://formspree.io/f/xoqrregd" name="formulario" method="post" id="formularioContacto" novalidate onsubmit="return validar()" target="_blank">
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" maxlength="30" >
+          <span id="nombreError">  </span>
+         
+          <label for="mail">Correo electrónico:</label>
+          <input type="email" name="user_email" id="mail" >
+          <span id="emailError"></span>
+
+          <label for="msg">Consulta:</label>
+          <textarea id="msg" name="user_message" ></textarea>
+          <span id="msgError"> </span>
+         
+          <button type="submit" id="botonEnviarMensaje" ">Enviar Mensaje</button>       <!-- //onclick="validarFormulario() -->
+
+
+
+        </form>
+
+
+
+     
+    </main>
+
+
+
+
+    <script src="/js/app.js"></script>
+    
+    <footer class="footerIndex"> 
+      
+        <a href="https://moodle.ryt.itu.uncu.edu.ar/" target="_blank"> <i class="fa-solid fa-graduation-cap"> aula virtual</i>   </a>
+  
+    </footer>
+
+
+    </body>
+
+    </html>

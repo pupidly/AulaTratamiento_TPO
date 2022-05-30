@@ -1,0 +1,784 @@
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Quicksand', sans-serif; */
+     font-family: 'Indie Flower', cursive; 
+    /* font-family: 'Quicksand', sans-serif; */
+    /* font-family: 'Cabin Sketch', cursive;*/ 
+
+    /* color: #2EB086; verde
+    color: #B8405E;  rosa
+    color: #313552;  azul
+    color: #EEE6CE;   beige 
+    color: #24252A; gris oscuro*/   
+}
+
+
+/* borrar arrows en input -number*/
+input::-webkit-outer-spin-button,        
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+body{
+    height:2000px;
+    width:100vw ;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 15% 82.5% 2.5%;
+   /*  grid-template-rows: 1.5fr 8.25fr 0.25fr ;  /*  15% 80% 5%; 1fr 8fr 0.3fr ; */ 
+    align-items: start;
+}
+
+
+header{
+    cursor: pointer;
+    background-image: linear-gradient(to top right,  rgb(42, 128, 181), rgb(157, 28, 216));
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+header h1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    font-family: 'Cabin Sketch', cursive;
+    /*font-family: 'Indie Flower', cursive;*/
+     font-size: 6rem;
+    color: #EEE6CE;
+    text-align: center;
+}
+
+
+nav{
+    grid-row-start: 1;
+    grid-column-start: 1;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: left;
+    font-weight: 600;
+    
+    height: 100%;
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav_links{
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;    
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 0px 0px 10px;
+} 
+
+
+
+
+.nav_links li a.active{
+    height: 100%;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #b1b8bd;
+
+}
+ 
+
+.contact{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    text-align: center; 
+   height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+}
+
+.con_bot{
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color:#2EB086;
+   font-weight: 400;
+   margin: 2px;
+}
+ 
+
+
+/* unvisited link */
+header a:link {
+    color:rgb(42, 128, 181);
+    text-decoration: none;
+  }
+  
+  /* visited link */
+header a:visited {
+    
+    color: rgb(157, 28, 216); 
+    text-decoration: none;
+    }
+
+/* mouse over link */
+header a:hover {
+    color: #ff5874;
+    text-decoration: none;
+    }
+
+/* selected link */
+header a:active {
+    color: #0000FF;
+    text-decoration: underline;
+    }
+
+
+/*__________________________INDEX____________________*/
+
+
+
+.mainIndex{
+    width: 100%;
+    height: 100%;  
+    background-color: #282d3f; /*#3b4045;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.animate__animated{
+  
+    color:rgb(236, 149, 56);
+ 
+    text-shadow: 2px 2px #0d100f;
+    font-weight: 600;
+    padding-top:  4%;
+    padding-bottom: 2%;
+    font-size: 2.6rem;
+}
+
+.textoIndex{
+    
+    color: #EEE6CE;
+    margin: 2% 10% 2% 10%;
+    padding: 1%;
+    border: 3px dashed #2EB086;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+
+
+.video1{
+   padding: 6% 0px 2% 0;
+
+ }
+ 
+ .video1 iframe{
+  /*  position: absolute;  */
+  
+    width: 728px;  /*560*/
+    height: 409px; /* 315px;*/ 
+ }
+ 
+ 
+
+/*__________________________SENOIDALES____________________*/
+
+.mainSenoidales{
+   width: 100%;
+   height: 100%;
+    background-color: #282d3f;
+    color: #EEE6CE;
+    display: grid;
+    grid-template-columns:0.3fr 4.5fr 4.5fr 0.3fr ;
+    grid-template-rows: 1fr 4fr 4fr ;    
+}
+
+
+.textoSenoidales{
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    align-self: center;
+    color:#2EB086;
+    grid-column-start:2 ;
+    grid-column-end:4 ;
+    grid-row-start:1 ;
+    grid-row-end:2 ; 
+    overflow: auto;
+}
+
+.parametrosSenoidales{
+    width: 90%;
+    height: 100%;
+    grid-column-start:2 ;
+    grid-column-end:3 ;
+    grid-row-start:2 ;
+    grid-row-end: 3; 
+    align-self: center; 
+    justify-self: flex-end;
+    border: 5px solid rgb(42, 128, 181);
+    border-radius: 20px;
+    background-color: white;   
+    margin-right: 5%;
+  
+}
+
+
+.parametrosSenoidalesTexto {   
+    height: 70%;
+    font-size: 1.2rem;
+    color: #282d3f;
+    font-weight: 600;
+    background:
+    linear-gradient(#ef082e, transparent),
+    linear-gradient(to top left, rgb(17, 124, 232) , transparent),
+     linear-gradient(to top right, rgb(30, 245, 41) , transparent); 
+    background-blend-mode: screen;
+    background-size: cover;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+ }
+
+
+
+ .parametrosSenoidalesTexto ul li{
+    padding-bottom: 20px;
+ }
+
+ .parametrosSenoidalesTexto h2{
+     text-align: center;
+     margin-bottom: 30px;
+     color:blanchedalmond;
+ }
+
+ 
+.parametrosSenoidalesImagen{
+    height: 30%;
+    border-color: gray;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    display:flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+.parametrosSenoidalesImagen img{
+    height: 90%;
+    width: auto;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+} 
+
+/* 
+.parametrosSenoidales:hover .parametrosSenoidalesImagen {
+    background-color: aliceblue;
+    -webkit-transform:scale(1.5);transform:scale(1.5);
+}
+ */
+
+.generacionSenoidales{
+    width: 90%;
+    height: 100%;
+    grid-column-start: 3;
+    grid-column-end:4 ;
+    grid-row-start:2 ;
+    grid-row-end:3 ; 
+    align-self: center; 
+    justify-self: flex-start;
+    border: 5px solid rgb(42, 128, 181) ;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 5%;
+}
+
+
+
+.generacionSenoidalesTexto{
+    height: 70%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background:
+    linear-gradient(#ef082e, transparent),
+    linear-gradient(to top left, rgb(17, 124, 232) , transparent),
+     linear-gradient(to top right, rgb(30, 245, 41) , transparent); 
+    background-blend-mode: screen;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    color: #282d3f;
+    overflow: auto;
+ }
+
+ 
+
+ #ecuacion1{
+     padding: 0.4px;
+    
+ }
+
+ .generacionSenoidalesImagen{
+    height: 30%;
+  
+    border-color: gray;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+
+
+
+
+.generacionSenoidalesImagen img{
+    height: 80%;
+    width: auto;
+    overflow: hidden;
+}
+
+ .controlesPloteo{
+    grid-column-start: 2;
+    grid-column-end:3 ;
+    grid-row-start:3 ;
+    grid-row-end:4 ; 
+    height: 80%;
+    width: 100%;
+    align-self: center;
+    justify-self:flex-end;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: start;
+    background-color: rgb(57, 94, 168);
+    box-shadow: 10px 10px 10px  rgba(0, 0, 0,.7);
+   
+
+}
+
+
+
+ .controlesPloteo div label{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1.5rem;
+    border: 2px ;
+    border-style: solid;
+    border-radius: 15px 15px 0 0;
+    background-color:rgb(118, 31, 199);
+    border-color: rgb(56, 54, 61);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0,.7);
+    padding: 5px;    
+}
+
+.controlesPloteo div input{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1rem;
+    border: 2px;
+    border-style: solid;
+    border-radius: 0 0 15px 15px;
+    border-color: rgb(56, 54, 61);
+    padding: 5px;
+    box-shadow: 5px 10px 10px  rgba(0, 0, 0,.7);
+}
+
+
+.hooverDefiniciones {
+    display: none;
+    font-size: 0.8em;
+    font-style: oblique;
+    font-weight: 100;
+    background-color: rgb(37, 37, 29);
+    font-family:  'Quicksand', sans-serif;  
+  }
+  
+  
+ .controlesPloteo div label i:hover p {
+    position: absolute;
+    margin-right: 0px;
+    margin-top:50px;
+    display: block;
+    color: #EEE6CE;
+  } 
+
+
+#check1{
+     width: 30%;
+    cursor: pointer;
+     background-color: #ff5874;
+     font-size: 1.5rem;
+     border: 4px;
+     border-color: #EEE6CE;
+     border-radius: 10px 10px 10px 10px;
+     
+
+}
+
+
+
+
+ .dibujoPloteo{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(57, 94, 168);
+    box-shadow: 15px 10px 10px  rgba(0, 0, 0,.7);
+    align-self: center;
+    justify-self:flex-end;
+    grid-column-start:3 ;
+    grid-column-end:4 ;
+    grid-row-start: 3;
+    grid-row-end: 4; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ #senoidal{
+   background-image: url(/img/pizarron1.png);
+   box-shadow: 5px 10px 10px rgba(0, 0, 0,.7);
+   width: 90%;
+   height: 90%;
+ }
+
+
+/*__________________________CONTACTO____________________*/
+
+
+#ContactoenActivo{
+background-color: #b1b8bd;
+
+}
+
+.mainContacto{
+    height: 100%;
+    background-color: #282d3f;
+    color: #EEE6CE;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr;
+    align-items: flex-start;
+    justify-items: center;   
+}
+
+.mainContacto h1{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin: 10% 0% 3% 0%;
+    text-align: center;
+    color: #185cd9c1;
+}
+.mainContacto h2{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin: 0%;
+    text-align: center;
+}
+
+.mainContacto form{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    border: 5px double rgb(41, 125, 208);
+    border-radius: 20px;  
+    margin: 5%;
+    padding: 5%;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   align-content: flex-start;
+}
+
+
+
+
+.mainContacto label{
+    display: block;
+    text-align: left;
+    font-size:x-large;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+.mainContacto input{
+    display: block;
+    font-size: x-large;
+    width: 80%;   
+    margin-left: 10%;
+    justify-self: flex-start;
+    height: 10%;
+}
+
+.mainContacto textarea{
+    display: block;
+    font-size: x-large;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.mainContacto span{
+    display: block;
+    margin-left: 10%;
+    color: #ef082e;
+}
+
+.EnviarMensaje{
+   
+    align-self: center;
+    font-size: x-large;
+    margin-bottom: 200px;
+    
+}
+#botonEnviarMensaje{
+    margin-top: 10%;
+   padding: 10px;
+    font-size: x-large;
+    background-color: #ff5874;
+    color: #EEE6CE;
+    border: 2px solid #EEE6CE;
+    align-self: center;
+    
+}
+
+
+
+
+
+
+/*__________________________FOOTER____________________*/
+
+
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #2EB086;
+    text-align: center;
+    padding: 20px;
+    margin:0px;
+
+}
+
+
+/* unvisited link */
+footer a:link {
+    color: #EEE6CE;
+    text-decoration: none;
+  }
+  
+ 
+  /* visited link */
+  footer a:visited {
+    color: #0000FF;
+    text-decoration: none;
+
+    }
+
+/* mouse over link */
+ footer a:hover {
+    color: #FF00FF;
+    text-decoration: none;
+
+}
+
+/* selected link */
+footer a:active {
+    text-decoration: underline;
+   
+    }
+
+
+/*__________________________FOOTER____________________*/    
+
+
+
+@media only screen and (max-width: 1100px) {
+
+    .mainSenoidales{
+        
+        grid-template-columns:  0.3fr 9fr 0.3fr ;
+        /* grid-template-rows: 1fr 2fr 2fr 2fr 2fr; */
+        grid-template-rows: 10% 25% 25% 20% 20%;
+     }
+
+    .textoSenoidales{
+        grid-column-start:2 ;
+        grid-row-start:1 ;
+        font-size: 1rem;
+    }
+        
+    .parametrosSenoidales{
+        grid-column-start: 2;
+        grid-row-start:2 ;
+        width: 90%;
+        height: 95%;
+        align-self: flex-start; 
+        justify-self: center; 
+        margin-right: 0%;
+
+    }
+    .parametrosSenoidalesTexto{
+        height: 65%;
+        font-size: 1rem;
+        overflow: auto;
+    }
+    .parametrosSenoidalesImagen{
+    height: 35%;
+    }
+
+    .generacionSenoidales{
+        grid-column-start:2 ;
+        grid-column-end: 3;
+        grid-row-start:3 ;
+        width: 90%;
+        height: 95%;
+        align-self: flex-start; 
+        justify-self: center;
+        margin-left: 0%;
+    }
+    
+    .generacionSenoidalesTexto{
+        font-size: 1rem;
+        height: 65%;
+    }
+    .generacionSenoidalesImagen{
+        height: 35%;
+    }
+
+
+    .controlesPloteo{
+        grid-column-start:2 ;
+        grid-column-end: 3;
+        grid-row-start:4 ;
+        grid-row-end:5 ;
+        height: 90%;
+        width: 90%;
+        align-self: end;
+        justify-self: center;
+        box-shadow: none;
+    }
+
+        
+    .controlesPloteo div label{
+        font-size: 1rem;
+        padding: 2px;
+        width: 60%; 
+    }
+
+    .controlesPloteo div input{
+        padding: 2px;
+        width: 60%;
+    }
+
+
+    #check1{
+        font-size: 1rem;
+        width: 20%;
+    }
+
+
+    .dibujoPloteo{
+        grid-column-start:2 ;
+        grid-column-end: 3;
+        grid-row-start:5 ;
+        grid-row-end:6;
+        height: 80%;
+        width: 90%;
+        align-self: start;
+        justify-self: center;
+    }
+ 
+    #senoidal{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 980px) {
+   
+
+    header h1 { 
+    font-size: 4rem; 
+    }
+
+    header nav{
+        font-size: 1rem;
+    }
+    .con_bot{
+        font-size: 1rem;
+    }
+  
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+   .textoSenoidales{
+       overflow: hidden;
+       font-size: 1rem;
+       z-index: 0;
+   }
+    .video1 iframe{
+        /*  position: absolute;  */
+        
+          width: 560px;  /*560*/
+          height: 315px; /* 315px;*/ 
+       }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+    
+    .textoSenoidales{
+        height: 100%;
+        overflow: scroll;
+    }
+    .video1 iframe{
+        transform: rotate(90deg);
+        margin: 100px;
+    }
+
+    
+
+}
+
